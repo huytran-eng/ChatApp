@@ -1,0 +1,16 @@
+{
+  "name": "peerjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "peerjs.js",
+  "scripts": {
+    "start": "node peerjs.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "peer": "^0.6.1"
+  }
+}
