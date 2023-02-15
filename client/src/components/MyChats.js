@@ -46,6 +46,7 @@ function MyChats() {
     };
 
     const handleSearch = async (event) => {
+        setSearch(event)
         if (search)
             try {
                 const config = {
@@ -61,7 +62,6 @@ function MyChats() {
     };
     useEffect(() => {
         socket.on("message-recieved", (message) => {
-            console.log('nhan dc tin nhan')
             fetchChats()
         })
         fetchChats();
@@ -78,10 +78,10 @@ function MyChats() {
             <div className='Sidebar'>
                 <div className='Search-bar'>
                     <div className='input'>
-                        <input placeholder="Search for friends" className="chatMenuInput" onChange={(e) => setSearch(e.target.value)} />
+                        <input placeholder="Tim ban be" className="chatMenuInput" onChange={(e) => handleSearch(e.target.value)} />
                         <div className="searchIcon">
                             {searchResult.length === 0 ? (
-                                <button onClick={handleSearch}>Go</button>
+                                <button onClick={handleSearch}>Tim </button>
                             ) : (
                                 <button onClick={() => setSearchResult([])}>Xoa</button>
                             )}

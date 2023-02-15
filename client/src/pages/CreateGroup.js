@@ -55,10 +55,7 @@ function CreateGroup() {
     }
     return (
         < Container >
-
-
             <Col className="d-flex align-items-center justify-content-center flex-direction-column">
-
                 <Form style={{ width: "80%", maxWidth: 500 }} onSubmit={handleCreate} >
                     <Form.Group className="mb-3" controlId="tenNhom">
                         <Form.Label>Ten Nhom</Form.Label>

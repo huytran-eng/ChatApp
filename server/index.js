@@ -31,13 +31,7 @@ app.use("/chat", chatRoutes);
 app.use("/message", messageRoutes);
 
 
-app.all('*', (req, res, next) => {
-    next(new ExpressError('Khong Tim Thay', 404))
-})
-app.use((err, req, res, next) => {
-    const { statusCode = 500, message = 'Oh No, Something Went Wrong!' } = err;
-    res.status(statusCode).render('error', { err })
-})
+
 
 const io = require('socket.io')(server, {
     cors: { origin: "*" }

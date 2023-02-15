@@ -46,7 +46,6 @@ module.exports.login = asyncHandler(async (req, res) => {
     }
     const cmp = await bcrypt.compare(password, user.password);
     if (user && cmp) {
-        console.log("co dang nhap")
         res.json({
             _id: user._id,
             username: user.username,

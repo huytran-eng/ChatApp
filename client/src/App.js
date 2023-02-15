@@ -6,9 +6,10 @@ import Signup from './pages/Signup';
 import TestPage from './pages/TestPage'
 import ChatPage from './pages/ChatPage';
 import VidCall from './pages/VidCall';
+import NotFound from './pages/NotFound';
 import { AppProvider } from './context';
 import CreateGroup from './pages/CreateGroup'
-import { useState } from 'react';
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
           <Route path='/test' element={<TestPage />} />
           <Route path='/group' element={<CreateGroup />} />
           <Route path='/call/:roomId' element={<VidCall />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AppProvider>
     </BrowserRouter>
